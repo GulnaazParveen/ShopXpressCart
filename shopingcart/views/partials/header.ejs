@@ -1,0 +1,94 @@
+        
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header__top">
+            <div class="container-fluid">
+                <div class="row disp">
+                    <div class="col-lg-6 col-md-7">
+                        <div class="header__top__left">
+                            <p class="top-heading">Free shipping, 30-day return or refund guarantee.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5">
+                        <div class="header__top__right">
+                            <div class="header_top_link">
+                                <a href="/register" class="head-link">Sign up</a>
+                                <% if(user) { %>
+                                    <li class="control " id="listtext">
+                                        <form action="/logout/<%= user._id %>" method="POST">
+                                            <button type="submit"  id="logintext">Logout</button>
+                                        </form>
+                                    </li>
+                                <% } else { %>
+                                    <li class="control"><a href="/login"  id="logintext">Login</a></li>
+                                <% } %> 
+                                <a href="#" class="head-link">Eng</a>
+                                <a href="#" class="head-link">FAQS</a>      
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="header-bottom">
+                    <div class="col-lg-3 col-md-3">
+                        <div class="header__title">
+                            <p class="head-bottom">fashion</p>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="search-container">
+                            <input type="text"  placeholder="search here.....">
+                               <span class="search-bar">
+                                  <i class="fa-solid fa-magnifying-glass"></i>
+                               </span>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="header-nav-option">
+                            <span class="icon"> <i class="fa-regular fa-heart "></i><span class="icon-title">wishlist</span></span>
+                            <span class="icon"><i class="fa-solid fa-cart-shopping"></i><span class="icon-title">cart</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 px-0">
+                    <nav class="header__menu">
+                        <ul class="mb-0 activeControl">
+                            <li class="control"><a href="/">Home</a></li>
+                            <li class="control"><a href="/shop">Shop</a></li>
+                            <li class="control"><a href="">Shopping details</a>
+                            </li>
+                            <li class="control"><a href="/shoppingCart">Shopping Cart</a></li>
+                            <!-- <% if(user) { %>
+                                <li class="control">
+                                    <form action="/logout/<%= user._id %>" method="POST">
+                                        <button type="submit">Logout</button>
+                                    </form>
+                                </li>
+                            <% } else { %>
+                                <li class="control"><a href="/login">Login</a></li>
+                            <% } %>                             -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>

@@ -1,0 +1,23 @@
+<!-- <%- include('./partials/header.ejs') %> -->
+<%- include('./partials/header.ejs', { title: title }) %>
+    <div class="container form-page">
+        <div class="row">
+            <div class="col-12 ">
+                <div class="form-container " id="signup">
+                    <h1 class="form-title">login here</h1>
+                    <p class="alert-success">
+                        <%= title %>
+                    </p>
+                    <form action="/loginUser/:id" method="POST">
+                        <input type="email" name="email" placeholder="Enter your email" class="form-ip">
+                        <input type="password" name="password" placeholder="Enter your password" class="form-ip">
+                        <input type="submit" value="Login" class="form-ip" id="login">
+                    </form>
+                    <h5 class="form-bottom">Dont't have an account?
+                        <a href="/register" class="signup-link">Signup</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>

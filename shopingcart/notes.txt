@@ -1,0 +1,26 @@
+// static userdatafetch = async (req, res) => {
+    //     try {
+    //         // user se to data aa gya url se to pehle check karna hai paasword and Confirmword sahi h ki nhi
+    //         const userdoc = new usercollection({
+    //             name:req.body.name,
+    //             email:req.body.email,
+    //             password:req.body.password,
+    //             Confirmpassword:req.body.Confirmpassword,
+    //         })
+    //             if (password !== ConfirmPassword) {
+    //                res.render('register', { title: 'Password does not match' });
+    //             }
+    //             const userWithEmail = await usercollection.findOne({ email: email });
+    //             if (userWithEmail) {
+    //                  res.render('register', { title: 'Email already exists, please choose a different one' });
+    //             }else{
+    //                 // save document
+    //               await userdoc.save();
+    //               res.redirect('login', { title: 'Congratulations! Your account has been created successfully. Please login.' });
+    //             }
+          
+    //     }catch(error){
+    //         console.log(error);
+    //         res.render('register', { title: 'An error occurred, please try again later' })
+    //     }
+    // }
