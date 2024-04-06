@@ -1,8 +1,20 @@
 import usercollection from "../model/accountSchema.js"
+import { product,  anotherproducts } from "../model/product.js";
+
 class shopping {
-    static home = (req, res) => {
+    static home = async (req, res) => {
         // res.render('index');
-        res.render('index', { title: '' })
+        try{
+            const  products=await product.find()
+            const  products2=await anotherproducts.find()
+
+            // console.log(products);
+            res.render('index', { title: '' ,datas:products,anotherDatas:products2})
+        }catch(error){
+            console.error(err);
+            res.status(500).send('Internal Server Error');
+        }
+       
     }
     static login = (req, res) => {
         res.render('login', { title: '' })

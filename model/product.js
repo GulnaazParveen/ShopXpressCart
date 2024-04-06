@@ -14,13 +14,12 @@ const productSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    quantity: {
-        type: Number,
-        required: true
-    }
 });
 
 // Create a model for the Product collection using the schema
-const Product = mongoose.model('Product', productSchema);
+const product = mongoose.model('product', productSchema);
+const anotherproducts = mongoose.model('anotherproducts', productSchema);
 
-module.exports = Product;
+
+// product.js
+export { product, anotherproducts };
